@@ -6,7 +6,10 @@ let environment = process.env.NODE_ENV;
 console.log(environment);
 
 function formatName(user) {
-    return user.firstName + ' ' + user.lastName;
+    if (user) {
+        return user.firstName + ' ' + user.lastName;
+    }
+    return 'React';
 }
 
 const user = {
